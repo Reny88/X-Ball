@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>X Ball Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="gameOver">Game Over</div> 
+  <div id="score">Score: 0</div>
+
+  <div class="container">
+    <button id="runButton">Start game</button>
+  </div>
+ 
+
+
+<div class="game-area">
+  <canvas id="myCanvas"></canvas>
+  
+<div class="bricks-container1">
+  <div class="bricks1 brick"></div>
+  <div class="bricks1 brick"></div>
+  <div class="bricks1 brick"></div>
+  <div class="bricks1 brick"></div>
+  <div class="bricks1 brick"></div>
+  <div class="bricks1 brick"></div>
+  <div class="bricks1 brick"></div>
+  <div class="bricks1 brick"></div>
+  <div class="bricks1 brick"></div>
+  <div class="bricks1 brick"></div>
+  <div class="bricks1 brick"></div>
+  <div class="bricks1 brick"></div>
+  <div class="bricks1 brick"></div>
+  <div class="bricks1 brick"></div>
+  <div class="bricks1 brick"></div>
+  <div class="bricks1 brick"></div>
+</div>
+
+<div class="bricks-container2">
+  <div class="green brick"></div>
+  <div class="green brick"></div>
+  <div class="green brick"></div>
+  <div class="green brick"></div>
+  <div class="green brick"></div>
+  <div class="green brick"></div>
+  <div class="green brick"></div>
+  <div class="green brick"></div>
+  <div class="green brick"></div>
+  <div class="green brick"></div>
+  <div class="green brick"></div>
+  <div class="green brick"></div>
+  <div class="green brick"></div>
+  <div class="green brick"></div>
+  <div class="green brick"></div>
+  <div class="green brick"></div>
+  <div class="green brick"></div>
+  <div class="green brick"></div>
+  <div class="green brick"></div>
+  <div class="green brick"></div> 
+</div>
+
+<div class="bricks-container3">
+    <div class="red brick"></div>
+    <div class="red brick"></div>
+    <div class="red brick"></div>
+    <div class="red brick"></div>
+    <div class="red brick"></div>
+    <div class="red brick"></div>
+    <div class="red brick"></div>
+    <div class="red brick"></div>
+    <div class="red brick"></div>
+    <div class="red brick"></div>
+    <div class="red brick"></div>
+    <div class="red brick"></div>
+    <div class="red brick"></div>
+    <div class="red brick"></div>
+    <div class="red brick"></div>
+    <div class="red brick"></div>
+    <div class="red brick"></div>
+    <div class="red brick"></div>
+    <div class="red brick"></div>
+    <div class="red brick"></div>
+    <div class="red brick"></div>
+    <div class="red brick"></div>
+    <div class="red brick"></div>
+    <div class="red brick"></div>
+    </div>
+
+    <div class="bricks-container4">
+        <div class=" brick"></div>
+        <div class="blue brick"></div>
+        <div class="blue brick"></div>
+        <div class="blue brick"></div>
+        <div class="blue brick"></div>
+        <div class="blue brick"></div>
+        <div class="blue brick"></div>
+        <div class="blue brick"></div>
+        <div class="blue brick"></div>
+        <div class="blue brick"></div>
+        <div class="blue brick"></div>
+        <div class="blue brick"></div>
+        <div class="blue brick"></div>
+        <div class="blue brick"></div>
+        <div class="blue brick"></div>
+        <div class="blue brick"></div>
+        <div class="blue brick"></div>
+        <div class="blue brick"></div>
+        <div class="blue brick"></div>
+        <div class="blue brick"></div>
+        <div class="blue brick"></div>
+        <div class="blue brick"></div>
+        <div class="blue brick"></div>
+        <div class="blue brick"></div>
+        <div class="blue brick"></div>
+        <div class="blue brick"></div>
+        <div class="blue brick"></div>
+     </div>
+
+        <div class="bricks-container5">
+            <div class="orange brick"></div>
+            <div class="orange brick"></div>
+            <div class="orange brick"></div>
+            <div class="orange brick"></div>
+            <div class="orange brick"></div>
+            <div class="orange brick"></div>
+            <div class="orange brick"></div>
+            <div class="orange brick"></div>
+            <div class="orange brick"></div>
+            <div class="orange brick"></div>
+            <div class="orange brick"></div>
+            <div class="orange brick"></div>
+            <div class="orange brick"></div>
+            <div class="orange brick"></div>
+            <div class="orange brick"></div>
+            <div class="orange brick"></div>
+            <div class="orange brick"></div>
+            <div class="orange brick"></div>
+            <div class="orange brick"></div>
+            <div class="orange brick"></div>
+            <div class="orange brick"></div>
+            <div class="orange brick"></div>
+            <div class="orange brick"></div>
+            <div class="orange brick"></div>
+            <div class="orange brick"></div>
+            <div class="orange brick"></div>
+            <div class="orange brick"></div>
+            <div class="orange brick"></div>
+            <div class="orange brick"></div>
+          </div>
+
+            <div class="bricks-container6">
+                <div class="grey brick"></div>
+                <div class="grey brick"></div>
+                <div class="grey brick"></div>
+                <div class="grey brick"></div>
+                <div class="grey brick"></div>
+                <div class="grey brick"></div>
+                <div class="grey brick"></div>
+                <div class="grey brick"></div>
+                <div class="grey brick"></div>
+                <div class="grey brick"></div>
+                <div class="grey brick"></div>
+                <div class="grey brick"></div>
+                <div class="grey brick"></div>
+                <div class="grey brick"></div>
+                <div class="grey brick"></div>
+                <div class="grey brick"></div>
+                <div class="grey brick"></div>
+                <div class="grey brick"></div>
+                <div class="grey brick"></div>
+                <div class="grey brick"></div>
+                <div class="grey brick"></div>
+                <div class="grey brick"></div>
+                <div class="grey brick"></div>
+                <div class="grey brick"></div>
+                <div class="grey brick"></div>
+                <div class="grey brick"></div>
+                <div class="grey brick"></div>
+                <div class="grey brick"></div>
+                <div class="grey brick"></div>
+                <div class="grey brick"></div>
+                <div class="grey brick"></div>
+                <div class="grey brick"></div>
+                <div class="grey brick"></div>
+              </div>
+
+                <div class="bricks-container7">
+                    <div class="violet brick"></div>
+                    <div class="violet brick"></div>
+                    <div class="violet brick"></div>
+                    <div class="violet brick"></div>
+                    <div class="violet brick"></div>
+                    <div class="violet brick"></div>
+                    <div class="violet brick"></div>
+                    <div class="violet brick"></div>
+                    <div class="violet brick"></div>
+                    <div class="violet brick"></div>
+                    <div class="violet brick"></div>
+                    <div class="violet brick"></div>
+                    <div class="violet brick"></div>
+                    <div class="violet brick"></div>
+                    <div class="violet brick"></div>
+                    <div class="violet brick"></div>
+                    <div class="violet brick"></div>
+                    <div class="violet brick"></div>
+                    <div class="violet brick"></div>
+                    <div class="violet brick"></div>
+                    <div class="violet brick"></div>
+                    <div class="violet brick"></div>
+                    <div class="violet brick"></div>
+                    <div class="violet brick"></div>
+                    <div class="violet brick"></div>
+                    <div class="violet brick"></div>
+                    <div class="violet brick"></div>
+                    <div class="violet brick"></div>
+                    <div class="violet brick"></div>
+                    <div class="violet brick"></div>
+                    <div class="violet brick "></div>
+                    <div class="violet brick"></div>
+                    <div class="violet brick"></div>
+                    <div class="violet brick"></div>
+                    <div class="violet brick"></div>
+                    <div class="violet brick"></div>
+                    <div class="violet brick"></div>
+                    
+                    
+                    </div>
+
+
+                    
+     <div class="bricks-container8">
+      <div class="neon brick"></div>
+      <div class="neon brick"></div>
+      <div class="neon brick"></div>
+      <div class="neon brick"></div>
+      <div class="neon brick"></div>
+      <div class="neon brick"></div>
+      <div class="neon brick"></div>
+      <div class="neon brick"></div>
+      <div class="neon brick"></div>
+      <div class="neon brick"></div>
+      <div class="neon brick"></div>
+      <div class="neon brick"></div>
+      <div class="neon brick"></div>
+      <div class="neon brick"></div>
+      <div class="neon brick"></div>
+      <div class="neon brick"></div>
+      <div class="neon brick"></div>
+      <div class="neon brick"></div>
+      <div class="neon brick"></div>
+      <div class="neon brick"></div>
+      <div class="neon brick"></div>
+      <div class="neon brick"></div>
+      <div class="neon brick"></div>
+      <div class="neon brick"></div>
+      <div class="neon brick"></div>
+      <div class="neon brick"></div>
+      <div class="neon brick"></div>
+      <div class="neon brick"></div>
+      <div class="neon brick"></div>
+      <div class="neon brick"></div>
+      <div class="neon brick"></div>
+      <div class="neon brick"></div>
+      <div class="neon brick"></div>
+      <div class="neon brick"></div>
+      <div class="neon brick"></div>
+      <div class="neon brick"></div>
+      <div class="neon brick"></div>
+      <div class="neon brick"></div>
+      
+    </div>
+  
+</div>
+</div>   
+
+<footer>
+  &copy; 2024 Renata Varga. All rights reserved.
+</footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,245 @@
+
+body{
+    position: relative;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    overflow: hidden;
+    background: rgb(130,120,130);
+    background: linear-gradient(59deg, rgba(130,120,130,1) 0%, rgba(78,65,78,1) 50%, rgba(45,46,42,0.7847514005602241) 100%);
+} 
+
+#myCanvas{
+    
+    width:100%;
+    height: 100%;
+    background: rgb(162,58,95);
+    background: linear-gradient(59deg, rgba(162,58,95,1) 23%, rgba(79,83,76,1) 51%, rgba(129,40,72,0.7847514005602241) 100%);
+}
+
+.game-area{
+    display: none;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(49, 51, 46, 0.288);
+    position: absolute;
+    overflow: hidden;
+    z-index: 5;
+}
+#gameOver {
+    display: none;
+    position: absolute;
+    top: 23%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: 154px;
+    color: red;
+    z-index: 1000;
+    border: 5px 5px black;
+}
+#score {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 24px;
+    color: white;
+    background-color: black;
+    padding: 5px;
+    border-radius: 5px;
+    z-index: 2000;
+}
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10; 
+}
+
+#runButton{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height:100px;
+    width: 300px;
+    font-size: larger;
+    background-color: darkslategray;
+
+
+}
+
+
+
+
+.bricks-container1,
+.bricks-container2,
+.bricks-container3,
+.bricks-container4,
+.bricks-container5,
+.bricks-container6,
+.bricks-container7,
+.bricks-container8 {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 30px;
+    margin: 0; 
+    padding: 0;
+}
+
+.bricks1,
+.green,
+.red,
+.blue,
+.orange,
+.grey,
+.violet,
+.neon {
+    position: relative;
+    bottom: 1px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50px;
+    margin: 0 2px; 
+    box-sizing: border-box; 
+    background: none;
+}
+
+.bricks1 {
+    background: rgb(179,179,33);
+    background: linear-gradient(59deg, rgba(179,179,33,1) 0%, rgba(140,148,144,1) 21%, rgba(230,7,155,0.7847514005602241) 100%);
+}
+
+.green {
+    background: rgb(82,179,33);
+    background: linear-gradient(59deg, rgba(82,179,33,1) 0%, rgba(117,193,81,1) 50%, rgba(154,163,170,0.7847514005602241) 100%);
+}
+
+.red {
+    background: rgb(179,33,33);
+    background: linear-gradient(59deg, rgba(179,33,33,1) 0%, rgba(193,81,108,1) 50%, rgba(168,125,130,0.7847514005602241) 100%);
+}
+
+.blue {
+    background: rgb(33,179,158);
+    background: linear-gradient(59deg, rgba(33,179,158,1) 0%, rgba(86,81,193,1) 50%, rgba(125,168,157,0.7847514005602241) 100%);
+}
+
+.orange {
+    background: rgb(228,73,6);
+    background: linear-gradient(59deg, rgba(228,73,6,1) 0%, rgba(193,182,81,1) 50%, rgba(179,178,125,0.7847514005602241) 100%);
+}
+
+.grey {
+    background: rgb(131,140,131);
+    background: linear-gradient(59deg, rgba(131,140,131,1) 0%, rgba(145,145,143,1) 50%, rgba(185,185,178,0.7847514005602241) 100%);
+}
+
+.violet {
+    background: rgb(176,6,175);
+    background: linear-gradient(59deg, rgba(176,6,175,1) 0%, rgba(209,118,209,1) 50%, rgba(184,185,178,0.7847514005602241) 100%);
+}
+
+.neon {
+    background: rgb(233,119,160);
+    background: linear-gradient(59deg, rgba(233,119,160,1) 0%, rgba(153,223,108,1) 50%, rgba(98,70,80,0.7847514005602241) 100%);
+}
+
+
+.bricks-container1 {
+    top: 10px;
+}
+
+.bricks-container2 {
+    top: 40px;
+}
+
+.bricks-container3 {
+    top: 70px;
+}
+
+.bricks-container4 {
+    top: 100px;
+}
+
+.bricks-container5 {
+    top: 125px;
+}
+
+.bricks-container6 {
+    top: 155px;
+}
+
+.bricks-container7 {
+    top: 185px;
+}
+
+.bricks-container8 {
+    top: 210px;
+}
+
+footer {
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    text-align: center;
+    color: white;
+    font-size: 14px;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    
+}
+
+ /* Media query */
+@media (max-width: 768px) {
+    #gameOver {
+        font-size: 64px;
+    }
+
+    #score {
+        font-size: 18px; 
+    }
+
+    .container {
+        width: 100%;
+        padding: 10px;
+    }
+
+    #runButton {
+        width: 100%;
+        padding: 10px;
+        font-size: 18px; 
+    }
+
+    .bricks1,
+    .green,
+    .red,
+    .blue,
+    .orange,
+    .grey,
+    .violet,
+    .neon {
+        width: 20px; 
+        height: 20px; 
+    }
+
+    .bricks-container1,
+    .bricks-container2,
+    .bricks-container3,
+    .bricks-container4,
+    .bricks-container5,
+    .bricks-container6,
+    .bricks-container7,
+    .bricks-container8 {
+        height: 20px; 
+    }
+    #score {
+        font-size: 11px; 
+    }
+}
