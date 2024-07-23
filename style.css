@@ -225,8 +225,8 @@ footer {
     .grey,
     .violet,
     .neon {
-        width: 20px; 
-        height: 20px; 
+        width:10px; 
+        height: 10px; 
     }
 
     .bricks-container1,
@@ -237,7 +237,7 @@ footer {
     .bricks-container6,
     .bricks-container7,
     .bricks-container8 {
-        height: 20px; 
+        height: 15px; 
     }
     #score {
         font-size: 11px; 

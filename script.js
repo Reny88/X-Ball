@@ -1,3 +1,4 @@
+// X ball
 
 document.addEventListener("DOMContentLoaded", () => {
     const runButton = document.getElementById("runButton");
@@ -22,6 +23,18 @@ document.addEventListener("DOMContentLoaded", () => {
     let computerScore = 0;
     let isGameOver = false;
 
+    function applyMediaQueryAdjustments() {
+        if (window.matchMedia("(max-width: 390px) and (max-height: 844px) and (-webkit-min-device-pixel-ratio: 3)").matches) {
+            paddleWidth = 60;
+            paddleHeight = 10;
+            ballRadius = 10;
+        } else {
+            paddleWidth = 95;
+            paddleHeight = 20;
+            ballRadius = 15;
+        }
+    }
+
     function initBricks() {
         bricks = [];
         const brickContainers = document.querySelectorAll(".bricks-container1, .bricks-container2, .bricks-container3, .bricks-container4, .bricks-container5, .bricks-container6, .bricks-container7, .bricks-container8");
@@ -37,13 +50,14 @@ document.addEventListener("DOMContentLoaded", () => {
                     width: rect.width,
                     height: rect.height,
                     status: 1,
-                    node: brick 
+                    node: brick
                 });
             });
         });
     }
 
     function startGame() {
+        applyMediaQueryAdjustments();
         gameArea.style.display = "block";
         gameOver.style.display = "none";
         runButton.style.display = "none";
@@ -116,23 +130,10 @@ document.addEventListener("DOMContentLoaded", () => {
         ctx.closePath();
     }
 
-    function drawBricks() {
-        bricks.forEach(brick => {
-            if (brick.status === 1) {
-                ctx.beginPath();
-                ctx.arc(brick.x + brick.width / 2, brick.y + brick.height / 2, brick.width / 2, 0, Math.PI * 2);
-                ctx.fillStyle = "#0095DD";
-                ctx.fill();
-                ctx.closePath();
-            }
-        });
-    }
-
     function draw() {
         ctx.clearRect(0, 0, canvas.width, canvas.height);
         drawBall();
         drawPaddle();
-        drawBricks();
         collisionDetection();
 
         if (x + dx > canvas.width - ballRadius || x + dx < ballRadius) {
@@ -141,14 +142,14 @@ document.addEventListener("DOMContentLoaded", () => {
         if (y + dy < ballRadius) {
             dy = -dy;
         } else if (y + dy > canvas.height - ballRadius) {
-            if (x > paddleX && x < paddleX + paddleWidth) {
+            if (x > paddleX && x < paddleX + paddleWidth && y + dy > canvas.height - paddleHeight - ballRadius) {
                 dy = -dy;
-                y = canvas.height - paddleHeight - ballRadius; 
+                y = canvas.height - paddleHeight - ballRadius;
             } else {
-                console.log("Game Over - Ball missed the paddle"); 
+                console.log("Game Over - Ball missed the paddle");
                 computerScore++;
                 updateScore();
-                gameOver.style.display = "block"; 
+                gameOver.style.display = "block";
                 runButton.style.display = "block";
                 isGameOver = true;
                 return;
@@ -163,7 +164,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         x += dx;
         y += dy;
-        
+
         if (!isGameOver) {
             requestAnimationFrame(draw);
         }
@@ -172,4 +173,7 @@ document.addEventListener("DOMContentLoaded", () => {
     function updateScore() {
         scoreElement.textContent = `Player: ${playerScore} - Computer: ${computerScore}`;
     }
+
+    applyMediaQueryAdjustments();
+    window.addEventListener("resize", applyMediaQueryAdjustments);
 });
